@@ -21,7 +21,14 @@ let songLink = document.querySelector(".display-link");
 
 // task 7: create and populate an array to store your image urls. Create three more arrays. One to store your song names, one for the artists, and a last one for the song links.
 
+let songList = ["Hype Boy", "Ditto", "Spring Day", "Tell Me", "Hip", "OMG"];
 
+let artistList = ["NewJean", "BTS", "Wonder Girls", "Mamamoo"];
+
+let imageUrlList = ["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9ihKX1zLMq3gvL9DuLkeQ_YJkQ8E-XRczXg&usqp=CAU", ];
+
+let songLinkList = [
+  "https://www.youtube.com/watch?v=11cta61wi0g ",       "https://www.youtube.com/watch?v=KhTeiaCezwM", "https://www.youtube.com/watch?v=xEeFrLSkMm8", "https://www.youtube.com/watch?v=BlHv3BbBv6A", "https://www.youtube.com/watch?v=K9_VFxzCuQ0"];
 
 
 

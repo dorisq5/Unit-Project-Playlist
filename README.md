@@ -21,7 +21,7 @@ They will use .push to add new songs to their playlist. Then, students will refa
    - [x] Fill out the Song Data section.
 4. [x] Read through the HTML starter code to understand the organization and class names given.
 5. [x] Read through the JavaScript starter code to determine where each given function is declared and where each given function is called.
-6. [ ] Declare variables for your display divs: the image url, song name, artist, and song link. Go back to the HTML to check that you are using the correct class names.
+6. [x] Declare variables for your display divs: the image url, song name, artist, and song link. Go back to the HTML to check that you are using the correct class names.
 
 
 ## JavaScript: Storing Song Data

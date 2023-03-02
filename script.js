@@ -3,10 +3,10 @@
 
 
 // input variables
-let image = document.querySelector(".image");
-let songName = document.querySelector(".song-name");
-let artist = document.querySelector(".artist");
-let songLink = document.querySelector(".song-link");
+let imageI = document.querySelector(".image");
+let songNameI = document.querySelector(".song-name");
+let artistI = document.querySelector(".artist");
+let songLinkI = document.querySelector(".song-link");
 
 // button variable
 let add = document.querySelector(".add");
@@ -85,13 +85,16 @@ let song6 = {
 }
 
 // task 13: inside each object, add key/value pairs to store the image url, song name, artist, and song link.
+//DID IT
 // task 14: create an array that stores all of the objects.
 
-let song = [song1, song2, song3, song4, song5, song6];
+let songs = [song1, song2, song3, song4, song5, song6];
 
 //REFACTOR LOOPS DAY 
 // task 15: update your `addSongInfo` function so the input values are saved in as values in a new object.
+//DID IT
 // task 16: update your `.push()` so the input object is added to your array of objects.
+//DID IT
 // task 17: update your loops based on your new array of objects.
 
 
@@ -102,9 +105,21 @@ function addSongInfo() {
 
 // task 9: declare a variable to save the user input of the image url. Declare three more variables that save user input: One for the song names, one for the artists, and a last one for the song links.
 
+  let newSong = {
+    
+  }
+  
+  newSong.imageInput = imageI;
+  newSong.songNameInput = songNameI;
+  newSong.artistInput = artistI;
+  newSong.songLinkInput = songLinkI;
+
+  
 
 // task 10: use `.push()` to add each input value to the correct array.
 
+  songs.push(newSong);
+  
 }
 
 
@@ -125,7 +140,10 @@ function displaySongInfo() {
 
 // task 8: loop through your images array and display the images to your songs in the correct div. Create three more loops. One for the song names, one for the artists, and a last one for the song links.
 
-
+  for(let i = 0; i < songs.length; i++){
+    
+    imageURL.insertAdjacentHTML(`beforeend`, `<img src = ${song[i].imageURL} >`);
+  }
 
 }
 
@@ -136,6 +154,7 @@ function displaySongInfo() {
 // click event to add and display songs
 add.onclick = function() {
   addSongInfo();
+  
   displaySongInfo();
 };
 

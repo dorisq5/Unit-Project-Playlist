@@ -15,7 +15,7 @@ let add = document.querySelector(".add");
 // task 6: declare variables for your display divs: the image url, song name, artist, and song link. Go back to the HTML to check that you are using the correct class names.
 
 let imageUrl = document.querySelector(".display-image");
-let songName = document.querySelector("display-song");
+let songName = document.querySelector(".display-song");
 let artist = document.querySelector(".display-artist");
 let songLink = document.querySelector(".display-link");
 
@@ -80,7 +80,7 @@ imageUrl:"https://upload.wikimedia.org/wikipedia/en/e/ef/Wonder_Girls_-_The_Wond
 let song6 = {
   name:"Gone",
   artist:"Rose",
-  imageUrl:"https://images.genius.com/04b543b45bb91449afcf59d62ec55be8.1000x1000x1.jpg",
+imageUrl:"https://images.genius.com/04b543b45bb91449afcf59d62ec55be8.1000x1000x1.jpg",
   link:"https://www.youtube.com/watch?v=K9_VFxzCuQ0"
 }
 
@@ -104,15 +104,15 @@ let songs = [song1, song2, song3, song4, song5, song6];
 function addSongInfo() {
 
 // task 9: declare a variable to save the user input of the image url. Declare three more variables that save user input: One for the song names, one for the artists, and a last one for the song links.
-
+  
   let newSong = {
     
   }
   
-  newSong.imageInput = imageI;
-  newSong.songNameInput = songNameI;
-  newSong.artistInput = artistI;
-  newSong.songLinkInput = songLinkI;
+  newSong.imageUrl = imageI;
+  newSong.name = songNameI;
+  newSong.artist = artistI;
+  newSong.link = songLinkI;
 
   
 
@@ -126,6 +126,7 @@ function addSongInfo() {
 
 
 /******** this function empties the display divs each time the button is clicked so that your playlist does not repeatedly add the data too many times. Where should this function be placed???********/
+
 function emptyDisplay() {
   displayImage.innerHTML = "";
   displaySong.innerHTML = "";
@@ -133,18 +134,22 @@ function emptyDisplay() {
   displayLink.innerHTML = "";
 }
 
-
-
-
 function displaySongInfo() {
 
 // task 8: loop through your images array and display the images to your songs in the correct div. Create three more loops. One for the song names, one for the artists, and a last one for the song links.
 
-  for(let i = 0; i < songs.length; i++){
+  for (let i = 0; i < songs.length; i++){
     
-    imageURL.insertAdjacentHTML(`beforeend`, `<img src = ${song[i].imageURL} >`);
-  }
+    imageUrl.insertAdjacentHTML(`beforeend`, `<img src = ${songs[i].imageUrl} >`);
 
+    songName.insertAdjacentHTML(`beforeend`, `<p> ${songs[i].name} </p>`);
+
+    artist.insertAdjacentHTML(`beforeend`, `<p> ${songs[i].artist} </p>`);
+
+    songLink.insertAdjacentHTML(`beforeend`, `<a href = ${songs[i].link} > YouTube Link </a>`);
+    
+  }
+  
 }
 
 
@@ -153,8 +158,8 @@ function displaySongInfo() {
 
 // click event to add and display songs
 add.onclick = function() {
+  emptyDisplay();
   addSongInfo();
-  
   displaySongInfo();
 };
 
